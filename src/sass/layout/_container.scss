@@ -1,0 +1,25 @@
+.container,
+.container-fluid {
+  @include make-container();
+}
+@each $breakpoint, $container-max-width in $container-max-widths {
+  .container-#{$breakpoint} {
+    @extend .container-fluid;
+  }
+  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+    %responsive-container-#{$breakpoint} {
+      max-width: $container-max-width;
+    }
+    $still-extend: true;
+    @each $name, $width in $grid-breakpoints {
+      @if ($still-extend) {
+        .container#{breakpoint-prefix($name, $grid-breakpoints)} {
+          @extend %responsive-container-#{$breakpoint};
+        }
+        @if ($breakpoint == $name) {
+          $still-extend: false;
+        }
+      }
+    }
+  }
+}

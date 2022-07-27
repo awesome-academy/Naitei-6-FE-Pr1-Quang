@@ -1,0 +1,29 @@
+.top-bar {
+  font-size: 12px;
+
+  &-list {
+    list-style: none;
+    @include flex($align: center, $gap: 0 32px);
+  }
+  &-item {
+    a {
+      color: #d6d6d6;
+      transition: all 0.2s;
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+    &:not(:first-child)::before {
+      display: inline-block;
+      content: '';
+      border-top: 2px solid black;
+      width: 1rem;
+      margin-bottom: 3px;
+    }
+  }
+  &-search {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+}
