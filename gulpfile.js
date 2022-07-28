@@ -8,7 +8,7 @@ const FilesPath = {
   sassFiles: './src/sass/**/*.scss',
   htmlFiles: './src/views/**/*.pug',
   jsFiles: './src/script/*.js',
-  assetsFiles: './assets/*',
+  assetsFiles: './src/assets/*',
 };
 
 function sassTask() {

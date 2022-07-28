@@ -11,7 +11,7 @@
 @mixin make-col($size: false, $columns: $grid-columns) {
   @if $size {
     flex: 0 0 auto;
-    width: percentage(math.div($size, $columns));
+    width: percentage(math.div($size, $columns)) !important;
   } @else {
     flex: 1 1 0;
     max-width: 100%;
@@ -23,8 +23,8 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--gutter-y));
-  margin-right: calc(-0.5 * var(--gutter-x));
-  margin-left: calc(-0.5 * var(--gutter-x));
+  margin-right: calc(0.5 * var(--gutter-x));
+  margin-left: calc(0.5 * var(--gutter-x));
 }
 @mixin make-col-ready($gutter: $grid-gutter-width) {
   --gutter-x: #{$gutter};

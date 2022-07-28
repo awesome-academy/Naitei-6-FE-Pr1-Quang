@@ -7,8 +7,7 @@
   @return if($max and $max > 0, $max - 0.02, null);
 }
 @function breakpoint-prefix($name, $breakpoints: $grid-breakpoints) {
-  $has-prefix: map-get($breakpoints, $name);
-  @return if($has-prefix, -#{$name}, '');
+  @return if(breakpoint-min($name, $breakpoints) == null, '', '-#{$name}');
 }
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
@@ -20,7 +19,6 @@
     @content;
   }
 }
-
 @mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
   $max: breakpoint-max($name, $breakpoints);
   @if $max {

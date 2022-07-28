@@ -1,15 +1,15 @@
-.top-bar {
-  font-size: 12px;
-
+.topbar {
   &-list {
     list-style: none;
-    @include flex($align: center, $gap: 0 32px);
   }
   &-item {
+    display: inline-block;
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
     a {
-      color: #d6d6d6;
+      color: var(--color-topbar);
       transition: all 0.2s;
-
       &:hover {
         color: var(--color-primary);
       }
@@ -17,13 +17,49 @@
     &:not(:first-child)::before {
       display: inline-block;
       content: '';
-      border-top: 2px solid black;
+      border-top: 2px solid var(--color-topbar);
       width: 1rem;
       margin-bottom: 3px;
+      margin-right: 3px;
+    }
+    &--active {
+      color: var(--color-primary) !important;
     }
   }
   &-search {
-    flex: 0 0 auto;
-    width: 25%;
+    text-align: right;
+    input {
+      font-size: 12px;
+      background: transparent;
+      outline: none;
+      border: none;
+      letter-spacing: 1px;
+
+      color: var(--color-topbar);
+      font-style: italic;
+    }
+    ::placeholder {
+      color: var(--color-topbar);
+      opacity: 1;
+    }
+    button {
+      color: var(--color-topbar);
+      border: none;
+      outline: none;
+      background-color: transparent;
+    }
+  }
+  @include media-breakpoint-down($name: 'lg') {
+    &-search {
+      text-align: center;
+      padding-top: 10px;
+    }
+  }
+  @include media-breakpoint-down($name: 'md') {
+    &-item {
+      &:not(:first-child)::before {
+        display: none;
+      }
+    }
   }
 }

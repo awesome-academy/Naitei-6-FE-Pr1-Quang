@@ -1,32 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <title>Document</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
   </head>
-  <body> 
-    <div class="container-fluid top-bar">
-      <div class="container"> 
-        <div class="row gx-5">
-          <ul class="top-bar-list col-lg-7">
-            <li class="top-bar-item"> <a href="#">Tài khoản của tôi </a></li>
-            <li class="top-bar-item"> <a href="#">Trạng thái đơn hàng</a></li>
-            <li class="top-bar-item"> <a href="#">Danh sách ưa thích</a></li>
-            <li class="top-bar-item"> <a href="#">Đăng nhập</a></li>
-            <li class="top-bar-item"><a href="#">Đăng ký</a></li>
-          </ul>
-          <div class="top-bar-search col-lg-5">
-            <input type="text" placeholder="Tìm kiếm ở đây">
-            <button aria-label="Search button"><i class="bi bi-search"></i></button>
+  <body>
+    <div class="container-fluid header gx-0">
+      <div class="header-container">
+        <div class="container">
+          <div class="row gx-5">
+                <ul class="topbar-list col-lg-7 col-md-12">       
+                  <li class="topbar-item"><a href="#">Tài khoản của tôi</a></li>
+                  <li class="topbar-item"><a href="#">Trạng thái đơn hàng</a></li>
+                  <li class="topbar-item"><a href="#">Danh sách ưa thích</a></li>
+                  <li class="topbar-item"><a href="#">Đăng nhập</a></li>
+                  <li class="topbar-item"><a href="#">Đăng ký</a></li>
+                </ul>
+                <div class="topbar-search col-lg-5 col-md-12">
+                  <form>
+                    <input type="text" placeholder="Tìm kiếm ở đây"/>
+                    <button aria-label="Search button"><i class="bi bi-search"></i></button>
+                  </form>
+                </div>
           </div>
         </div>
       </div>
+      <div class="header-title"> 
+        <h1 class="header-title-big">Rượu vang đỏ</h1>
+        <h2 class="header-title-small">Since 1980</h2>
+      </div>
     </div>
+    <nav class="nav container-fluid">
+      <div class="container">
+        <div class="row gx-5 nav-container">
+          <div class="col-lg-2 nav-title"> 
+            <h3>Wine House </h3>
+            <h4>Since 1980</h4>
+          </div>
+              <input class="nav-toggle" id="menuToggle" type="checkbox"/>
+              <label class="nav-icon" for="menuToggle"><i class="bi bi-list"></i></label>
+              <ul class="nav-menu col-lg-10">
+                <li class="nav-menu-item"> <a href="#">Trang chủ</a></li>
+                <li class="nav-menu-item"> <a href="#">Rượu vang đỏ</a></li>
+                <li class="nav-menu-item"> <a href="#">Rượu trắng</a></li>
+                <li class="nav-menu-item"> <a href="#">Champange</a></li>
+                <li class="nav-menu-item"> <a href="#">Thông tin</a></li>
+                <li class="nav-menu-item"> <a href="#">Blog</a></li>
+                <li class="nav-menu-item"> <a href="#">Liên hệ</a></li>
+              </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="container-fluid section-intro"> <img class="intro-img" src="../../assets/bg-intro.jpg" alt="gioi thieu"/>
+      <div class="container gx-5"> 
+        <div class="intro-heading"> 
+          <h2 class="intro-title">Giới thiệu </h2><img src="../../assets/title-dark.png" alt="gioi thieu"/>
+          <p class="intro-desc">Mriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faciteorum claritatem. Investigtiones demonstraverunt lectores legere me lius quod ii legunt saepius.Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putam</p>
+              <button class="btn intro-btn">Xem thêm</button>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid section-special">
+      <div class="container">
+        <div class="row gx-5">
+          <div class="col-lg-12 special-container">
+            <div class="special-bg"><img class="img-fluid" src="../../../assets/special-product.jpg" alt="Rượu vang champange"/></div>
+            <div class="special-product row gx-0">
+              <div class="special-product-img col-lg-7 col-md-12"><img class="img-fluid" src="../../../assets/special-product-img.jpg" alt="Rượu vang champange"/></div>
+              <div class="special-product-detail col-lg-5 col-md-12">
+                <h2>Chi tiết sản phẩm</h2><img src="../../../assets/titleleft-dark.png" alt="Rượu vang champange"/>
+                <p class="special-product-price">330000</p>
+                    <button class="btn special-btn">Add to cart</button>
+                <p class="special-product-desc">Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ oxy hoá của protein béo.</p>
+                <div class="special-time-box"> 
+                      <div class="special-time"> 
+                        <p class="special-time-number">334</p>
+                        <p class="special-time-unit">Ngày</p>
+                      </div>
+                      <div class="special-time"> 
+                        <p class="special-time-number">24</p>
+                        <p class="special-time-unit">Giờ</p>
+                      </div>
+                      <div class="special-time"> 
+                        <p class="special-time-number">25</p>
+                        <p class="special-time-unit">Phút</p>
+                      </div>
+                      <div class="special-time"> 
+                        <p class="special-time-number">6</p>
+                        <p class="special-time-unit">Giây</p>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

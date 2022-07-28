@@ -19,7 +19,7 @@ $container-max-widths: (
   lg: 960px,
   xl: 1140px,
   xxl: 1320px,
-);
+) !default;
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -28,8 +28,14 @@ $grid-breakpoints: (
   xl: 1200px,
   xxl: 1400px,
 );
+
 :root {
   --color-primary: #e6ae48;
   --color-white: #fff;
+  --color-product: #1a1a1a;
+  --color-topbar: #d6d6d6;
+  --color-black: #000;
+  --bg-light: rgba(255, 255, 255, 0.35);
   --bg-color: #fff;
+  --section-spacing: 120px;
 }

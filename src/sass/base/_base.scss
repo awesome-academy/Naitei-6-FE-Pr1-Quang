@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900');
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 400;
   font-size: 16px;
   margin: 0;
@@ -24,7 +23,9 @@ p {
   line-height: 28px;
   color: var(--color-text);
 }
-
+button {
+  cursor: pointer;
+}
 h1,
 h2,
 h3,

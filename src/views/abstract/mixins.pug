@@ -1,0 +1,32 @@
+mixin topbar(currentPage)
+    -var topbarItems = [{"name":'Tài khoản của tôi',"href":"#"},{"name":'Trạng thái đơn hàng',"href":"#"},{"name":'Danh sách ưa thích',"href":"#"},{"name":'Đăng nhập',"href":"#"},{"name":'Đăng ký',"href":"#"}];
+    ul.topbar-list.col-lg-7.col-md-12        
+        each item in topbarItems
+            li.topbar-item
+                a("href"= item.href)= item.name
+    .topbar-search.col-lg-5.col-md-12
+        form
+            input(type="text",placeholder="Tìm kiếm ở đây")
+            button(aria-label="Search button")
+                i.bi.bi-search
+    
+mixin navigation(currentPage)
+    -var navItems = [{name:"Trang chủ",href:"#"},{name:"Rượu vang đỏ",href:"#"},{name:"Rượu trắng",href:"#"},{name:"Champange",href:"#"},{name:"Thông tin",href:"#"},{name:"Blog",href:"#"},{name:"Liên hệ",href:"#"}];
+    input#menuToggle.nav-toggle(type='checkbox')
+    label.nav-icon(for='menuToggle')
+        i.bi.bi-list
+    ul.nav-menu.col-lg-10
+        each item in navItems 
+            li.nav-menu-item 
+                a(href= item.href)= item.name
+
+mixin button(obj)
+    button.btn(class= obj.class)= obj.text
+
+mixin specialProduct(obj) 
+    .special-time 
+        p.special-time-number= obj.num
+        p.special-time-unit= obj.unit
+
+
+

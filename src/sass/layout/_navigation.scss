@@ -1,0 +1,73 @@
+.nav {
+  background: var(--color-black);
+  @include py(20px);
+  &-container {
+    justify-content: space-between;
+  }
+  &-title {
+    text-align: center;
+    color: var(--color-primary);
+    font-family: 'Dancing Script', cursive;
+    font-size: 29px;
+    h4 {
+      font-size: 16px;
+    }
+  }
+  &-menu {
+    padding-left: 20px;
+    list-style: none;
+    @include flex($align: center, $justify: space-between);
+    &-item {
+      a {
+        font-size: 13px;
+        letter-spacing: 3px;
+        text-align: right;
+        color: var(--color-white);
+        display: inline-block;
+        &:hover {
+          color: var(--color-primary);
+        }
+      }
+
+      &--active {
+        color: var(--color-primary);
+      }
+    }
+  }
+  &-icon {
+    color: var(--color-white);
+    display: none;
+  }
+  &-toggle {
+    display: none;
+  }
+
+  @include media-breakpoint-down($name: 'lg') {
+    position: relative;
+    &-menu {
+      display: none;
+    }
+    &-toggle:checked ~ &-menu {
+      position: absolute;
+      display: block;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      background-color: var(--color-black);
+      @include px(9rem);
+    }
+    &-toggle:checked ~ &-menu > &-menu-item {
+      padding: 5px 0;
+      border-bottom: 1px solid var(--color-primary);
+    }
+
+    &-icon {
+      display: flex;
+      align-self: center;
+      font-size: 30px;
+      border: 2px solid var(--color-white);
+      padding: 2px 3px;
+      border-radius: 5px;
+    }
+  }
+}

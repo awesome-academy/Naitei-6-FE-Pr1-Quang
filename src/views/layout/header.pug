@@ -1,19 +1,11 @@
-.container-fluid.top-bar
-    .container 
-        .row.gx-5
-            ul.top-bar-list.col-lg-7
-                li.top-bar-item 
-                    a(href="#") Tài khoản của tôi 
-                li.top-bar-item 
-                    a(href="#") Trạng thái đơn hàng
-                li.top-bar-item 
-                    a(href="#") Danh sách ưa thích
-                li.top-bar-item  
-                    a(href="#") Đăng nhập
-                li.top-bar-item
-                    a(href="#") Đăng ký
-            .top-bar-search.col-lg-5
-                input(type="text",placeholder="Tìm kiếm ở đây")
-                button(aria-label="Search button")
-                    i.bi.bi-search
+include ../abstract/mixins
+.container-fluid.header.gx-0
+    .header-container
+        .container
+            .row.gx-5
+                +topbar()
+    .header-title 
+        h1.header-title-big Rượu vang đỏ
+        h2.header-title-small Since 1980
+
 
