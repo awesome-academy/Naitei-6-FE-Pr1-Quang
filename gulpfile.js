@@ -37,6 +37,7 @@ function assetsTask() {
 
 function serve() {
   browserSync.init({ server: { baseDir: './public' } });
+  watch(FilesPath.assetsFiles, assetsTask);
   watch(FilesPath.htmlFiles, htmlTask);
   watch(FilesPath.sassFiles, sassTask);
   watch(FilesPath.jsFiles, jsTask);

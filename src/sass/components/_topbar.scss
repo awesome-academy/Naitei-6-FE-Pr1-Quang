@@ -2,6 +2,7 @@
   &-list {
     list-style: none;
   }
+
   &-item {
     display: inline-block;
     &:not(:first-child) {
@@ -26,6 +27,7 @@
       color: var(--color-primary) !important;
     }
   }
+
   &-search {
     text-align: right;
     input {
@@ -49,12 +51,14 @@
       background-color: transparent;
     }
   }
+
   @include media-breakpoint-down($name: 'lg') {
     &-search {
       text-align: center;
       padding-top: 10px;
     }
   }
+
   @include media-breakpoint-down($name: 'md') {
     &-item {
       &:not(:first-child)::before {

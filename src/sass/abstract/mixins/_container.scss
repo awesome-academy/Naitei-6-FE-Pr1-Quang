@@ -44,24 +44,24 @@
 ) {
   @each $breakpoint in map-keys($breakpoints) {
     $prefix: breakpoint-prefix($breakpoint);
+    @each $key, $value in $gutters {
+      .gx-#{$key} {
+        --gutter-x: #{$value} !important;
+      }
+      .gy-#{$key} {
+        --gutter-x: #{$value} !important;
+      }
+      .g-#{$key} {
+        --gutter-x: #{$value} !important;
+        --gutter-y: #{$value} !important;
+      }
+    }
     @include media-breakpoint-up($breakpoint, $breakpoints) {
       @if $columns > 0 {
         @for $i from 1 through $columns {
           .col#{$prefix}-#{$i} {
             @include make-col($i, $columns);
           }
-        }
-      }
-      @each $key, $value in $gutters {
-        .gx-#{$key} {
-          --gutter-x: #{$value} !important;
-        }
-        .gy-#{$key} {
-          --gutter-x: #{$value} !important;
-        }
-        .g-#{$key} {
-          --gutter-x: #{$value} !important;
-          --gutter-y: #{$value} !important;
         }
       }
     }

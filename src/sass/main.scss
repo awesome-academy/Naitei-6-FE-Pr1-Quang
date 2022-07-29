@@ -3,7 +3,7 @@
 @import 'abstract/mixins/breakpoint';
 @import 'abstract/mixins/flex';
 @import 'abstract/mixins/grid';
-
+@import 'abstract/mixins/ratio';
 @import 'abstract/mixins/container';
 @import 'base/base';
 @import 'base/utilities';
@@ -11,10 +11,16 @@
 @import 'components/intro';
 @import 'components/button';
 @import 'components/topbar';
+@import 'components/gallery';
+@import 'components/product';
+@import 'components/info';
+@import 'components/blog';
 @import 'components/special';
+
 @import 'layout/header';
 @import 'layout/navigation';
 @import 'layout/container';
 @import 'layout/grid';
+@import 'layout/footer';
 
 @import 'page/home';

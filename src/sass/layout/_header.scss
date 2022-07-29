@@ -1,16 +1,24 @@
 .header {
   font-size: 12px;
   position: relative;
-  background-image: url('../../assets/slide-1.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 95vh;
 
+  &-bg {
+    @include aspect-ratio(16, 9);
+    position: relative;
+    background-image: url('../../assets/slide-1.jpg');
+    height: 100%;
+  
+    z-index: -5;
+    background-size: cover;
+    background-position: center;
+   
+  }
   &-container {
+    @include py(10px);
     background-color: var(--bg-light);
     backdrop-filter: blur(5px);
     width: 100%;
-    @include py(10px);
+
     > .row {
       @include flex($justify: space-between, $align: center);
     }
@@ -20,14 +28,12 @@
   }
 
   &-title {
+    @include flex($direction: column, $justify: center);
     font-family: 'Dancing Script', cursive;
     color: var(--color-white);
     width: 100%;
     letter-spacing: 2px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+
     text-align: center;
     &-big {
       font-size: 180px;
